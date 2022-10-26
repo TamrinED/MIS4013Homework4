@@ -32,9 +32,16 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["InstructorID"]?></td>
-    <td><a href="instructor-course.php?InstructorID=<?=$row["InstructorID"]?>"><?=$row["FirstName"]?></a></td>
+    <td>
+      <form method="post" action="instructor-course.php">
+                <input type="submit" name="InstructorID" value="<?=$row["InstructorID"]?>" />
+               
+              </form></td>
+    <td><?=$row["FirstName"]?></td>
     <td><?=$row["LastName"]?></td>
+    <td>
+              
+            </td>
   </tr>
 <?php
   }
