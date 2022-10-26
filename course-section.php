@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["SectionID"]?></td>
+    <td><a href="section-project.php?SectionID=<?=$row["SectionID"]?>"><?=$row["SectionID"]?></td>
     <td><?=$row["Prefix"]?></td>
     <td><?=$row["Number"]?></td>
     <td><?=$row["CourseID"]?></td>
