@@ -61,25 +61,25 @@ if ($result->num_rows > 0) {
 ?>
   
      <tr>
-            <td><?=$row["ID"]?></td>
+            <td><?=$row["InstructorID"]?></td>
             <td><a href="instructor-section.php?id=<?=$row["ID"]?>"><?=$row["FirstName"]?></a></td>
             <td>
-              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editInstructor<?=$row["ID"]?>">Edit</button>
-              <div class="modal fade" id="editInstructor<?=$row["ID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editInstructor<?=$row["ID"]?>Label" aria-hidden="true">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editInstructor<?=$row["InstructorID"]?>">Edit</button>
+              <div class="modal fade" id="editInstructor<?=$row["InstructorID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editInstructor<?=$row["InstructorID"]?>Label" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="editInstructor<?=$row["ID"]?>Label">Edit Instructor</h1>
+                      <h1 class="modal-title fs-5" id="editInstructor<?=$row["InstructorID"]?>Label">Edit Instructor</h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <form method="post" action="">
                         <div class="mb-3">
-                          <label for="editInstructor<?=$row["ID"]?>Name" class="form-label">Name</label>
-                          <input type="text" class="form-control" id="editInstructor<?=$row["ID"]?>Name" aria-describedby="editInstructor<?=$row["ID"]?>Help" name="iName" value="<?=$row['FirstName']?>">
-                          <div id="editInstructor<?=$row["ID"]?>Help" class="form-text">Enter the instructor's name.</div>
+                          <label for="editInstructor<?=$row["InstructorID"]?>Name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="editInstructor<?=$row["ID"]?>Name" aria-describedby="editInstructor<?=$row["InstructorID"]?>Help" name="iName" value="<?=$row['FirstName']?>">
+                          <div id="editInstructor<?=$row["InstructorID"]?>Help" class="form-text">Enter the instructor's name.</div>
                         </div>
-                        <input type="hidden" name="iid" value="<?=$row['ID']?>">
+                        <input type="hidden" name="iid" value="<?=$row['InstructorID']?>">
                         <input type="hidden" name="saveType" value="Edit">
                         <input type="submit" class="btn btn-primary" value="Submit">
                       </form>
@@ -90,7 +90,7 @@ if ($result->num_rows > 0) {
             </td>
             <td>
               <form method="post" action="">
-                <input type="hidden" name="iid" value="<?=$row["ID"]?>" />
+                <input type="hidden" name="iid" value="<?=$row["InstructorID"]?>" />
                 <input type="hidden" name="saveType" value="Delete">
                 <input type="submit" class="btn" onclick="return confirm('Are you sure?')" value="Delete">
               </form>
