@@ -99,7 +99,8 @@ if ($result->num_rows > 0) {
     
 <?php
   
-} else {
+}} else {
+  
   echo "0 results";
 }
 $conn->close();
