@@ -51,7 +51,7 @@ if ($conn->connect_error) {
   }
 }
 ?>
-
+<?php
 $sql = "SELECT InstructorID, FirstName, LastName FROM Instructor";
 $result = $conn->query($sql);
 
@@ -99,7 +99,8 @@ if ($result->num_rows > 0) {
     
 <?php
   
-}} else {
+}
+              } else {
   
   echo "0 results";
 }
