@@ -63,7 +63,7 @@ if ($result->num_rows > 0) {
 ?>
   
      <tr>
-            <td><a href="instructor-section.php?id=<?=$row["InstructorID"]?>"><?=$row["InstructorID"]?></td>
+            <td><a href="instructor-course.php?id=<?=$row["InstructorID"]?>"><?=$row["InstructorID"]?></td>
             <td><?=$row["FirstName"]?></a></td>
     <td><?=$row["LastName"]?></a></td>
             <td>
@@ -78,9 +78,9 @@ if ($result->num_rows > 0) {
                     <div class="modal-body">
                       <form method="post" action="">
                         <div class="mb-3">
-                          <label for="editInstructor<?=$row["InstructorID"]?>Name" class="form-label">Name</label>
-                          <input type="text" class="form-control" id="editInstructor<?=$row["ID"]?>Name" aria-describedby="editInstructor<?=$row["InstructorID"]?>Help" name="iName" value="<?=$row['FirstName']?>">
-                          <div id="editInstructor<?=$row["InstructorID"]?>Help" class="form-text">Enter the instructor's name.</div>
+                          <label for="editInstructor<?=$row["FirstName"]?>Name" class="form-label">Edit First Name</label>
+                          <input type="text" class="form-control" id="editInstructor<?=$row["FirstName"]?>Name" aria-describedby="editInstructor<?=$row["FirstName"]?>Help" name="iName" value="<?=$row['FirstName']?>">
+                          <div id="editInstructor<?=$row["FirstName"]?>Help" class="form-text">Enter the instructor's name.</div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['InstructorID']?>">
                         <input type="hidden" name="saveType" value="Edit">
