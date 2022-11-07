@@ -11,12 +11,10 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="index.php">Database Connection</a>
     </div>
-    <div
     <ul class="nav navbar-nav">
-      <li><a href="instructors.php">Instructors</a></li>
-      <li><a href="courses.php">Courses</a></li>
+      <li class="active"><a href="instructors.php">Instructors</a></li>
+<li class="active"><a href="courses.php">Courses</a></li>
     </ul>
-      </div>
   </div>
 </nav>
     
