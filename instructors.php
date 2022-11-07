@@ -63,7 +63,11 @@ if ($result->num_rows > 0) {
 ?>
   
      <tr>
-            <td><a href="instructor-course.php?id=<?=$row["InstructorID"]?>"><?=$row["InstructorID"]?></td>
+            <td>
+              <form method="post" action="instructor-course.php">
+                <input type="submit" name="InstructorID" value="<?=$row["InstructorID"]?>" />
+              </form>
+              </td>
             <td><?=$row["FirstName"]?></a></td>
     <td><?=$row["LastName"]?></a></td>
             <td>
