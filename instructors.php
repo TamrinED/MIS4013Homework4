@@ -95,7 +95,7 @@ if ($result->num_rows > 0) {
               <form method="post" action="">
                 <input type="hidden" name="iid" value="<?=$row["InstructorID"]?>" />
                 <input type="hidden" name="saveType" value="Delete">
-                <input type="submit" class="btn" onclick="return confirm('Are you sure?')" value="Delete">
+                <input type="submit" class="btn" onclick="return confirm('Are you sure you want to delete this instructor?')" value="Delete">
               </form>
             </td>
           </tr>
