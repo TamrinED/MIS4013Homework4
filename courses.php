@@ -8,7 +8,6 @@
       <th>CourseID</th>
       <th>Prefix</th>
       <th>Number</th>
-      <th>InstructorID</th>
     </tr>
   </thead>
   
@@ -28,8 +27,8 @@ if ($conn->connect_error) {
 
 //$ciid = $_POST['InstructorID'];      
 //echo $iid;
-$sql = "SELECT CourseID, c.Prefix, c.Number, c.InstructorID
-FROM Course c JOIN Instructor i ON c.InstructorID=i.InstructorID;
+$sql = "SELECT CourseID, Prefix, Number
+FROM Course;
 //WHERE c.InstructorID=i.InstructorID"
 //echo $sql;
     $result = $conn->query($sql);
@@ -42,7 +41,6 @@ if ($result->num_rows > 0) {
     <td><?=$row["CourseID"]?></td>
     <td><?=$row["Prefix"]?></td>
     <td><?=$row["Number"]?></td>
-    <td><?=$row["InstructorID"]?></td>
   </tr>
 <?php
   }
