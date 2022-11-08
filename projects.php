@@ -86,6 +86,13 @@ if ($result->num_rows > 0) {
                 </div>
               </div>
             </td>
+       <td>
+              <form method="post" action="">
+                <input type="hidden" name="pid" value="<?=$row["ProjectID"]?>" />
+                <input type="hidden" name="saveType" value="Delete">
+                <input type="submit" class="btn" onclick="return confirm('Are you sure you want to delete this project?')" value="Delete">
+              </form>
+            </td>
   </tr>
 <?php
   }
