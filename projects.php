@@ -24,6 +24,32 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
+      
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  switch ($_POST['saveType']) {
+    case 'Add':
+      $sqlAdd = "insert into Project (Name) value (?)";
+      $stmtAdd = $conn->prepare($sqlAdd);
+      $stmtAdd->bind_param("s", $_POST['pName']);
+      $stmtAdd->execute();
+      echo '<div class="alert alert-success" role="alert">New project added.</div>';
+      break;
+    case 'Edit':
+      $sqlEdit = "update Project set Name=? where ProjectID=?";
+      $stmtEdit = $conn->prepare($sqlEdit);
+      $stmtEdit->bind_param("si", $_POST['pName'], $_POST['pid']);
+      $stmtEdit->execute();
+      echo '<div class="alert alert-success" role="alert">Instructor edited.</div>';
+      break;
+    case 'Delete':
+      $sqlDelete = "delete from Project where ProjectID=?";
+      $stmtDelete = $conn->prepare($sqlDelete);
+      $stmtDelete->bind_param("i", $_POST['pid']);
+      $stmtDelete->execute();
+      echo '<div class="alert alert-success" role="alert">Project deleted.</div>';
+      break;
+  }
+}
 
 $sql = "SELECT ProjectID, SectionID, Name FROM Project";
 $result = $conn->query($sql);
@@ -35,6 +61,31 @@ if ($result->num_rows > 0) {
     <td><?=$row["ProjectID"]?></td>
     <td><?=$row["Name"]?></td>
     <td><?=$row["SectionID"]?></td>
+      <td>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editProject<?=$row["ProjectID"]?>">Edit</button>
+              <div class="modal fade" id="editProject<?=$row["ProjectID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editProject<?=$row["ProjectID"]?>Label" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="editProject<?=$row["ProjectID"]?>Label">Edit Project</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form method="post" action="">
+                        <div class="mb-3">
+                          <label for="editProject<?=$row["Name"]?>Name" class="form-label">Edit Project Name</label>
+                          <input type="text" class="form-control" id="editProject<?=$row["Name"]?>Name" aria-describedby="editProject<?=$row["Name"]?>Help" name="pName" value="<?=$row['Name']?>">
+                          <div id="editProject<?=$row["FirstName"]?>Help" class="form-text">Enter the Project's name.</div>
+                        </div>
+                        <input type="hidden" name="pid" value="<?=$row['ProjectID']?>">
+                        <input type="hidden" name="saveType" value="Edit">
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
   </tr>
 <?php
   }
