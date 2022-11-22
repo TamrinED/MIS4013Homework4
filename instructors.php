@@ -71,8 +71,8 @@ if ($result->num_rows > 0) {
             <td><?=$row["FirstName"]?></a></td>
     <td><?=$row["LastName"]?></a></td>
             <td>
-              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="editInstructor<?=$row["FirstName"]?>">Edit</button>
-              <div class="modal fade" id="editInstructor<?=$row["InstructorID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editInstructor<?=$row["FirstName"]?>Label" aria-hidden="true">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="editInstructor<?=$row["InstructorID"]?>">Edit</button>
+              <div class="modal fade" id="editInstructor<?=$row["InstructorID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editInstructor<?=$row["InstructorID"]?>Label" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -82,11 +82,11 @@ if ($result->num_rows > 0) {
                     <div class="modal-body">
                       <form method="post" action="">
                         <div class="mb-3">
-                          <label for="editInstructor<?=$row["FirstName"]?>Name" class="form-label">Edit First Name</label>
-                          <input type="text" class="form-control" id="editInstructor<?=$row["InstructorID"]?>Name" aria-describedby="editInstructor<?=$row["FirstName"]?>Help" name="iName" value="<?=$row['FirstName']?>">
+                          <label for="editInstructor<?=$row["InstructorID"]?>Name" class="form-label">Edit First Name</label>
+                          <input type="text" class="form-control" id="editInstructor<?=$row["InstructorID"]?>Name" aria-describedby="editInstructor<?=$row["InstructorID"]?>Help" name="iName" value="<?=$row['InstructorID']?>">
                           <div id="editInstructor<?=$row["InstructorID"]?>Help" class="form-text">Enter the instructor's name.</div>
                         </div>
-                        <input type="hidden" name="iid" value="<?=$row['FirstName']?>">
+                        <input type="hidden" name="iid" value="<?=$row['InstructorID']?>">
                         <input type="hidden" name="saveType" value="Edit">
                         <input type="submit" class="btn btn-primary" value="Submit">
                       </form>
