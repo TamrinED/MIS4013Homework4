@@ -71,7 +71,7 @@ if ($result->num_rows > 0) {
             <td><?=$row["FirstName"]?></a></td>
     <td><?=$row["LastName"]?></a></td>
             <td>
-              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editInstructor<?=$row["InstructorID"]?>">Edit</button>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editInstructor<?=$row["FirstName"]?>">Edit</button>
               <div class="modal fade" id="editInstructor<?=$row["FirstName"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editInstructor<?=$row["FirstName"]?>Label" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -86,7 +86,7 @@ if ($result->num_rows > 0) {
                           <input type="text" class="form-control" id="editInstructor<?=$row["FirstName"]?>Name" aria-describedby="editInstructor<?=$row["FirstName"]?>Help" name="iName" value="<?=$row['FirstName']?>">
                           <div id="editInstructor<?=$row["FirstName"]?>Help" class="form-text">Enter the instructor's name.</div>
                         </div>
-                        <input type="hidden" name="iid" value="<?=$row['InstructorID']?>">
+                        <input type="hidden" name="iid" value="<?=$row['FirstName']?>">
                         <input type="hidden" name="saveType" value="Edit">
                         <input type="submit" class="btn btn-primary" value="Submit">
                       </form>
