@@ -133,7 +133,7 @@ $conn->close();
     </div> 
 <br><br>
 
-<form action="action_page.php">
+<form action="action_page.php" method="post">
     <label for="projects"><b>Choose a project discipline:</b></label>
   <select name="projects" id="projects">
     <option value="biz">Business</option>
