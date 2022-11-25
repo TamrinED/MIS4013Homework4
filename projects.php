@@ -131,13 +131,10 @@ $conn->close();
         </div>
       </div>
     </div> 
-    
-    <h5>Go to:</h5>
-
-<p>Choose a discipline for projects.</p>
+<br><br>
 
 <form action="action_page.php">
-  <label for="projects">Choose a project:</label>
+  <label for="projects" style="bold">Choose a project discipline:</label>
   <select name="projects" id="projects">
     <option value="biz">Business</option>
     <option value="infosys">Information Systems</option>
