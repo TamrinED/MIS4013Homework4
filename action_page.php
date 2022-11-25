@@ -1,16 +1,15 @@
 <?php require_once("header.php"); ?>
 
 <?php
-$p = projects;
 
-if ($p == "biz") {
+if ($_POST[''] === 'biz') {
   echo "<h2>Business Projects:</h2>
 
 <ul>
   <li>Sweaters</li>
   <li>Waterbottle</li>
 </ul>";
-} elseif ($p == "infosys") {
+} elseif ($_POST[''] === 'infosys') {
   echo "<h2>Information Systems Projects:</h2>
 
 <ul>
@@ -21,6 +20,5 @@ if ($p == "biz") {
 </ul> ";
 }
 ?>
-
 
 <?php require_once("footer.php"); ?>
