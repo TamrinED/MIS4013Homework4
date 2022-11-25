@@ -126,7 +126,7 @@ $conn->close();
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="courseName" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="courseName" aria-describedby="nameHelp" name="iName">
+                  <input type="text" class="form-control" id="courseName" aria-describedby="nameHelp" name="cID">
                   <div id="nameHelp" class="form-text">Enter the course's name.</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
