@@ -2,9 +2,9 @@
 
 <?php 
 if (isset($_POST['projects']) == 'biz') {
- echo "<h2>Business Projects:</h2>";
+ echo "<h2>Business Projects:</h2>
 
-echo "<ul>
+<ul>
   <li>Sweaters</li>
   <li>Waterbottle</li>
 </ul>";
