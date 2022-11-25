@@ -39,7 +39,7 @@ if ($conn->connect_error) {
       $stmtEdit = $conn->prepare($sqlEdit);
       $stmtEdit->bind_param("si", $_POST['pName'], $_POST['pid']);
       $stmtEdit->execute();
-      echo '<div class="alert alert-success" role="alert">Instructor edited.</div>';
+      echo '<div class="alert alert-success" role="alert">Project edited.</div>';
       break;
     case 'Delete':
       $sqlDelete = "delete from Project where ProjectID=?";
@@ -104,7 +104,35 @@ $conn->close();
   </tbody>
     </table>
     
-    <h1>Go to:</h1>
+   <br/>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProject">Add New</button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="addProject" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addProjectLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="addProjectLabel">Add Instructor</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="projectName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="projectName" aria-describedby="nameHelp" name="pName">
+                  <div id="nameHelp" class="form-text">Enter the project's name.</div>
+                </div>
+                <input type="hidden" name="saveType" value="Add">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+    <h5>Go to:</h5>
 
 <p>Choose a discipline for projects.</p>
 
