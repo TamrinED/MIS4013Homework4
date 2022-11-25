@@ -2,14 +2,14 @@
 
 <?php
 
-if ($_POST[''] === 'biz') {
+if ($_POST['projects'] === 'biz') {
   echo "<h2>Business Projects:</h2>
 
 <ul>
   <li>Sweaters</li>
   <li>Waterbottle</li>
 </ul>";
-} elseif ($_POST[''] === 'infosys') {
+} elseif ($_POST['projects'] === 'infosys') {
   echo "<h2>Information Systems Projects:</h2>
 
 <ul>
