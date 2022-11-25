@@ -4,7 +4,7 @@
  <h1>Projects according to their discipline</h1>
  
 <?php 
-if (isset($_POST['projects']) == 'biz') {
+if ($_POST['projects'] == 'biz') {
  echo "<h2>Business Projects:</h2>
 
 <ul>
@@ -12,7 +12,7 @@ if (isset($_POST['projects']) == 'biz') {
   <li>Waterbottle</li>
 </ul>";
  
-} elseif (isset($_POST['projects']) == 'infosys') {
+} elseif ($_POST['projects'] == 'infosys') {
  echo "<h2>Information Systems Projects:</h2>
 
  <ul>
