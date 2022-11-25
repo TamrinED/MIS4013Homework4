@@ -75,7 +75,7 @@ if ($result->num_rows > 0) {
                         <div class="mb-3">
                           <label for="editProject<?=$row["Name"]?>Name" class="form-label">Edit Project Name</label>
                           <input type="text" class="form-control" id="editProject<?=$row["Name"]?>Name" aria-describedby="editProject<?=$row["Name"]?>Help" name="pName" value="<?=$row['Name']?>">
-                          <div id="editProject<?=$row["FirstName"]?>Help" class="form-text">Enter the Project's name.</div>
+                          <div id="editProject<?=$row["Name"]?>Help" class="form-text">Enter the Project's name.</div>
                         </div>
                         <input type="hidden" name="pid" value="<?=$row['ProjectID']?>">
                         <input type="hidden" name="saveType" value="Edit">
