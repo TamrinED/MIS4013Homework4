@@ -108,7 +108,7 @@ $conn->close();
 
 <br/>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addInstructor">Add New</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addSection">Add New</button>
 
       <!-- Modal -->
       <div class="modal fade" id="addSection" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addSectionLabel" aria-hidden="true">
