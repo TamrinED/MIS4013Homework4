@@ -47,7 +47,7 @@ if ($conn->connect_error) {
           <tr>
             <th>InstructorID</th>
             <th>FirstName</th>
-            <th></th>
+            <th>LastName</th>
             <th></th>
           </tr>
         </thead>
