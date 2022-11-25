@@ -1,9 +1,11 @@
 <?php require_once("header.php"); ?>
 <body>
 
+ <h1>Projects according to their discipline</h1>
+ 
 <?php 
 if (isset($_POST['projects']) == 'biz') {
- echo "<h1>Business Projects:</h1>
+ echo "<h2>Business Projects:</h2>
 
 <ul>
   <li>Sweaters</li>
@@ -11,7 +13,7 @@ if (isset($_POST['projects']) == 'biz') {
 </ul>";
  
 } elseif (isset($_POST['projects']) == 'infosys') {
- echo "<h1>Information Systems Projects:</h1>
+ echo "<h2>Information Systems Projects:</h2>
 
  <ul>
   <li>Espian</li>
