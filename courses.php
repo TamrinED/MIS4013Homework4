@@ -28,7 +28,7 @@ if ($conn->connect_error) {
        if ($_SERVER["REQUEST_METHOD"] == "POST") {
   switch ($_POST['saveType']) {
     case 'Add':
-      $sqlAdd = "insert into Course (CourseID) value (?)";
+      $sqlAdd = "insert into Course (Prefix) value (?)";
       $stmtAdd = $conn->prepare($sqlAdd);
       $stmtAdd->bind_param("s", $_POST['cID']);
       $stmtAdd->execute();
@@ -108,11 +108,9 @@ $conn->close();
   </tbody>
     </table>
     
-    <br />
+    <br/>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourse">
-        Add New
-      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourse">Add New</button>
 
       <!-- Modal -->
       <div class="modal fade" id="addCourse" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addCourseLabel" aria-hidden="true">
@@ -125,9 +123,9 @@ $conn->close();
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="courseName" class="form-label">Name</label>
+                  <label for="courseName" class="form-label">Prefix</label>
                   <input type="text" class="form-control" id="courseName" aria-describedby="nameHelp" name="cid">
-                  <div id="nameHelp" class="form-text">Enter the course's name.</div>
+                  <div id="nameHelp" class="form-text">Enter the course's prefix.</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
                 <button type="submit" class="btn btn-primary">Submit</button>
