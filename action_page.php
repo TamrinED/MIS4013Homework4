@@ -7,8 +7,8 @@ if ($_POST["projects"] == 'biz') {
 <ul>
   <li>Sweaters</li>
   <li>Waterbottle</li>
-</ul>"; ?>
-} elseif <?php ($_POST["projects"] == 'infosys') {
+</ul>";
+} elseif ($_POST["projects"] == 'infosys') {
  echo "<h2>Information Systems Projects:</h2>
 
  <ul>
