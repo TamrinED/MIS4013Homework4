@@ -103,5 +103,20 @@ $conn->close();
 ?>
   </tbody>
     </table>
+    
+    <h1>Go to:</h1>
 
+<p>Choose a discipline for projects.</p>
+
+<form action="action_page.php">
+  <label for="projects">Choose a project:</label>
+  <select name="projects" id="projects">
+    <option value="biz">Business</option>
+    <option value="infosys">Information Systems</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+    
     <?php require_once("footer.php"); ?>
