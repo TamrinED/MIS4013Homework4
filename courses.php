@@ -96,7 +96,6 @@ if ($result->num_rows > 0) {
                 <input type="submit" class="btn" onclick="return confirm('Are you sure you want to delete this course?')" value="Delete">
               </form>
       </td>
-      
   </tr>
       
 <?php
@@ -108,5 +107,35 @@ $conn->close();
 ?>
   </tbody>
     </table>
+    
+    <br />
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourse">
+        Add New
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="addCourse" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addCourseLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="addCourseLabel">Add Course</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="courseName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="courseName" aria-describedby="nameHelp" name="iName">
+                  <div id="nameHelp" class="form-text">Enter the course's name.</div>
+                </div>
+                <input type="hidden" name="saveType" value="Add">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <?php require_once("footer.php"); ?>
