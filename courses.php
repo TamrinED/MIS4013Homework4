@@ -42,7 +42,7 @@ if ($conn->connect_error) {
       echo '<div class="alert alert-success" role="alert">Course edited.</div>';
       break;
     case 'Delete':
-      $sqlDelete = "delete from Course where ID=?";
+      $sqlDelete = "delete from Course where CourseID=?";
       $stmtDelete = $conn->prepare($sqlDelete);
       $stmtDelete->bind_param("i", $_POST['cid']);
       $stmtDelete->execute();
