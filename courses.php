@@ -30,7 +30,7 @@ if ($conn->connect_error) {
     case 'Add':
       $sqlAdd = "insert into Course (Prefix) value (?)";
       $stmtAdd = $conn->prepare($sqlAdd);
-      $stmtAdd->bind_param("s", $_POST['cID']);
+      $stmtAdd->bind_param("s", $_POST['cid']);
       $stmtAdd->execute();
       echo '<div class="alert alert-success" role="alert">New course added.</div>';
       break;
