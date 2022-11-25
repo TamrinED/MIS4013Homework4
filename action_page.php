@@ -9,7 +9,7 @@ if (projects == biz) {
 </ul> 
 }
 
-if (projects == infosys) {
+else if (projects == infosys) {
 <h2>Information Systems Projects:</h2>
 
 <ul>
