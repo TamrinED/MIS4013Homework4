@@ -1,13 +1,13 @@
 <?php require_once("header.php"); ?>
 
-if <?php ($_POST["projects"] === 'biz')  {
+if <?php ($_POST["projects"] === 'biz')  Then {
  echo "<h2>Business Projects:</h2>
 
 <ul>
   echo "<li>Sweaters</li>";
   echo "<li>Waterbottle</li>";
 </ul>"; ?>
-} elseif <?php ($_POST["projects"] === 'infosys')  {
+} elseif <?php ($_POST["projects"] === 'infosys') Then {
  echo "<h2>Information Systems Projects:</h2>
 
  <ul>
