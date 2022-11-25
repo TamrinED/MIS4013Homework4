@@ -1,6 +1,7 @@
 <?php require_once("header.php"); ?>
 
 if (projects == biz) {
+echo
 <h2>Business Projects:</h2>
 
 <ul>
@@ -10,6 +11,7 @@ if (projects == biz) {
 }
 
 else if (projects == infosys) {
+echo
 <h2>Information Systems Projects:</h2>
 
 <ul>
