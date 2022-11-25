@@ -106,4 +106,32 @@ $conn->close();
   </tbody>
     </table>
 
+<br/>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addInstructor">Add New</button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="addSection" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addSectionLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="addSectionLabel">Add Section</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="sectionName" class="form-label">ID</label>
+                  <input type="text" class="form-control" id="sectionID" aria-describedby="idHelp" name="sID">
+                  <div id="idHelp" class="form-text">Enter the section's ID.</div>
+                </div>
+                <input type="hidden" name="saveType" value="Add">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <?php require_once("footer.php"); ?>
