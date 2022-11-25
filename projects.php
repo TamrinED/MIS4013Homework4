@@ -134,7 +134,7 @@ $conn->close();
 <br><br>
 
 <form action="action_page.php">
-  <label for="projects" style="bold">Choose a project discipline:</label>
+    <label for="projects"><b>Choose a project discipline:</b></label>
   <select name="projects" id="projects">
     <option value="biz">Business</option>
     <option value="infosys">Information Systems</option>
